@@ -1,0 +1,15 @@
+#Configurando o ambiente para teste
+    $sudo apt-get install python-virtualenv
+
+    1 - $virtualenv envdesafio
+    2 - $source envdesafio/bin/activate
+    3 - $pip install -r requirements.txt
+        #Será instalado o django==1.5.4
+    4 - #banco sqlite3
+        #Necessário criar superuser
+        $python manage.py syncdb
+
+#Levantando servidor para testar desafio
+    1 - $python manage.py runserver 0.0.0.0:8000
+    2 - Acessar a url localhost:8000/envio
+    3 - Realizar o envio de um arquivo nos padrões do "example_input.tab" e um fora dos padrões.

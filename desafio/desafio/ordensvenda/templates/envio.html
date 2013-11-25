@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Desafio</title>
+<link rel="stylesheet" type="text/css" href="/static/css/input.css">
+</head>
+<body>
+
+{% if messages %}
+
+    {% for mensagem in messages %}
+        {% ifequal mensagem.tags 'success' %}
+
+            <div class="alert fade in alert-success sucesso">
+
+                {{ mensagem|safe }}
+
+            </div>
+
+        {% endifequal %}
+
+        {% ifequal mensagem.tags 'error' %}
+
+            <div class="alert fade in alert-error erro">
+
+                {{ mensagem|safe }}
+
+            </div>
+
+        {% endifequal %}
+
+    {% endfor %}
+
+{% endif %}
+
+<form method="POST" action="." enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    </table>
+
+    <input type="submit" value="Enviar">
+</form>
+
+{% if total %}
+    O total foi de  <b> R$ {{ total }} <b>
+{% endif%}
+
+</body>
+</html>

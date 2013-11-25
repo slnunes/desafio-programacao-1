@@ -1,0 +1,15 @@
+input[type=file]{
+    font-size: 12px;
+    border-radius:2px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #cccccc; 
+    width:310px
+}
+
+body {
+  border: 1px solid black;
+}
